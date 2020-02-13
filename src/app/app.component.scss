@@ -1,0 +1,33 @@
+@import "../global.scss";
+
+.app-page-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: $xxxl-width;
+
+  @include media-queries-breakpoint(xxl) {
+    width: $xxl-width;
+  }
+
+  @include media-queries-breakpoint(xl) {
+    width: $xl-width;
+  }
+
+  @include media-queries-breakpoint(lg) {
+    width: $lg-width;
+  }
+
+  @include media-queries-breakpoint(md) {
+    width: $md-width;
+  }
+
+  @include media-queries-breakpoint(sm) {
+    width: $sm-width;
+  }
+
+  @include media-queries-breakpoint(xs) {
+    width: $xs-width;
+  }
+}

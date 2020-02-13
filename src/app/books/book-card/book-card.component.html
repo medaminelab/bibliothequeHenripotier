@@ -1,0 +1,20 @@
+<div class="book-card-container" fxLayout="row">
+  <div class="book-cover">
+    <img mat-card-image [src]="book?.cover" alt="Book cover">
+  </div>
+  <div class="book-description" fxLayout="column">
+    <h3 class="book-title">
+      {{book?.title}}
+    </h3>
+    <div class="book-price" fxLayout="row">
+      <div class="key">prix :</div>
+      <div class="value">{{book?.price}}</div>
+    </div>
+    <div class="book-synopsys" fxLayout="row">
+      <div class="key">Synopsys :</div>
+      <div class="value">
+        <p *ngFor="let paragraph of book?.synopsis">{{paragraph}}</p>
+      </div>
+    </div>
+  </div>
+</div>

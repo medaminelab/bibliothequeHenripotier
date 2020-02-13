@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from '@angular/router';
 import { routesNames } from "./configs/RoutesConfig";
 import { AppComponent } from "./app.component";
+import { BooksPageComponent } from "./books/books-page/books-page.component";
 
 export const routes: Routes = [{
 	path: '',
@@ -9,7 +10,7 @@ export const routes: Routes = [{
 	pathMatch: 'full'
 }, {
 	path: routesNames.livres,
-	component: AppComponent,
+	component: BooksPageComponent,
 	pathMatch: 'full'
 }, {
 	path: routesNames.panier,
