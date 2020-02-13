@@ -1,0 +1,48 @@
+@import "../../../global.scss";
+
+.book-card-container {
+  height: 100%;
+  width: 100%;
+  padding: 31px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.161);
+  @include row-align();
+  .book-cover {
+    img {
+      width: 300px;
+      height: 400px;
+    }
+  }
+  .book-description {
+    margin-left: 30px;
+    h3 {
+      margin-bottom: 16px;
+    }
+    .key {
+      color: #555;
+      min-width: 80px;
+      text-align: right;
+    }
+    .book-price,
+    .book-synopsys {
+      @include row-align();
+      .value {
+        margin-left: 10px;
+      }
+    }
+    .book-price {
+      .value {
+        color: #b12704;
+        font-weight: bold;
+      }
+    }
+    .book-synopsys {
+      margin-top: 10px;
+      .value {
+        p:first-child {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}

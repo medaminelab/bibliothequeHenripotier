@@ -1,0 +1,43 @@
+@import "../../global.scss";
+
+header {
+  height: 60px;
+  background-color: #a38f6b;
+  div {
+    margin: 0px auto;
+    height: 100%;
+    width: $xxxl-width;
+    @include row-align();
+    justify-content: space-between;
+    align-items: center;
+    .header-title {
+      color: #ffffff;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    @include media-queries-breakpoint(xxl) {
+      width: $xxl-width;
+    }
+
+    @include media-queries-breakpoint(xl) {
+      width: $xl-width;
+    }
+
+    @include media-queries-breakpoint(lg) {
+      width: $lg-width;
+    }
+
+    @include media-queries-breakpoint(md) {
+      width: $md-width;
+    }
+
+    @include media-queries-breakpoint(sm) {
+      width: $sm-width;
+    }
+
+    @include media-queries-breakpoint(xs) {
+      width: $xs-width;
+    }
+  }
+}

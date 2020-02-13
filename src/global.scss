@@ -10,6 +10,7 @@ $xxl-width: 1170px;
 $xxxl-width: 1330px;
 
 /*** Variables de couleurs ***/
+$background-color: #ffebc1;
 
 /*** Mixins ***/
 @mixin media-queries-breakpoint($point) {
@@ -37,5 +38,22 @@ $xxxl-width: 1330px;
     @media (min-width: 1440px) and (max-width: 1599.98px) {
       @content;
     }
+  }
+}
+
+@mixin row-align() {
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+}
+
+/******  CSS GLOBALE  ******/
+body {
+  margin: 0px;
+  background-color: $background-color;
+  h3 {
+    margin: 0px;
+    font-size: 23px;
+    font-weight: bold;
   }
 }

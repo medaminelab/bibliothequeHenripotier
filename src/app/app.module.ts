@@ -1,15 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-rooting.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BooksPageComponent } from './books/books-page/books-page.component';
 import { BookCardComponent } from './books/book-card/book-card.component';
-import { FlexLayoutModule } from '@angular/flex-layout'; 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+import { HeaderComponent } from './header/header.component';
+registerLocaleData(localeFr);
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     BooksPageComponent,
     BookCardComponent
   ],
@@ -19,7 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HttpClientModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
