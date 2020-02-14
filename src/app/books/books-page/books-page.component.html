@@ -1,5 +1,16 @@
-<div class="books-list">
-  <div *ngFor="let book of books" class="book-card">
-    <app-book-card [book]="book"></app-book-card>
+<div class="search-bar">
+  <div>
+    <input class="search-field" type="text" placeholder="Rechercher..." [(ngModel)]="patternSearch"
+      (change)="filterBooks()">
+  </div>
+</div>
+<div class="app-page-container">
+
+  <h1>LIVRES DISPONIBLES ({{filteredBooks?.length}}/{{books?.length}}) </h1>
+
+  <div class="books-list">
+    <div *ngFor="let book of filteredBooks" class="book-card">
+      <app-book-card [book]="book"></app-book-card>
+    </div>
   </div>
 </div>

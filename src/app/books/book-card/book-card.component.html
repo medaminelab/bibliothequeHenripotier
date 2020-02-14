@@ -3,9 +3,13 @@
     <img mat-card-image [src]="book?.cover" alt="Book cover">
   </div>
   <div class="book-description">
-    <h3 class="book-title">
+    <h2 class="book-title">
       {{book?.title}}
-    </h3>
+    </h2>
+    <div class="book-reference">
+      <div class="key">Référence :</div>
+      <div class="value">{{book?.isbn}}</div>
+    </div>
     <div class="book-price">
       <div class="key">prix :</div>
       <div class="value">{{book?.price | currency:'EUR':'symbol':'':'fr'}}</div>

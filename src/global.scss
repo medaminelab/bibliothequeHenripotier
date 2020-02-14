@@ -10,7 +10,8 @@ $xxl-width: 1170px;
 $xxxl-width: 1330px;
 
 /*** Variables de couleurs ***/
-$background-color: #ffebc1;
+$background-color: #f8e8c6;
+$brown-color: #a38f6b;
 
 /*** Mixins ***/
 @mixin media-queries-breakpoint($point) {
@@ -51,9 +52,47 @@ $background-color: #ffebc1;
 body {
   margin: 0px;
   background-color: $background-color;
-  h3 {
+  h1 {
+    margin: 0px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  h2 {
     margin: 0px;
     font-size: 23px;
     font-weight: bold;
+  }
+  .app-page-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .app-page-container,
+  .search-bar div {
+    margin-left: auto;
+    margin-right: auto;
+    width: $xxxl-width;
+    @include media-queries-breakpoint(xxl) {
+      width: $xxl-width;
+    }
+
+    @include media-queries-breakpoint(xl) {
+      width: $xl-width;
+    }
+
+    @include media-queries-breakpoint(lg) {
+      width: $lg-width;
+    }
+
+    @include media-queries-breakpoint(md) {
+      width: $md-width;
+    }
+
+    @include media-queries-breakpoint(sm) {
+      width: $sm-width;
+    }
+
+    @include media-queries-breakpoint(xs) {
+      width: $xs-width;
+    }
   }
 }

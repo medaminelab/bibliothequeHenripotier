@@ -2,11 +2,13 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { BooksService } from './books.service';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('Service: Books', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [BooksService]
+      imports: [HttpClientTestingModule],
+      providers: [BooksService, HttpTestingController]
     });
   });
 

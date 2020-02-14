@@ -15,7 +15,7 @@
   }
   .book-description {
     margin-left: 30px;
-    h3 {
+    h2 {
       margin-bottom: 16px;
     }
     .key {
@@ -24,7 +24,9 @@
       text-align: right;
     }
     .book-price,
-    .book-synopsys {
+    .book-synopsys,
+    .book-reference {
+      margin-top: 10px;
       @include row-align();
       .value {
         margin-left: 10px;
@@ -37,7 +39,6 @@
       }
     }
     .book-synopsys {
-      margin-top: 10px;
       .value {
         p:first-child {
           margin-top: 0px;

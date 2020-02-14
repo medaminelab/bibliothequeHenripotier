@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-rooting.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BooksPageComponent } from './books/books-page/books-page.component';
 import { BookCardComponent } from './books/book-card/book-card.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { registerLocaleData } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import localeFr from '@angular/common/locales/fr';
 import { HeaderComponent } from './header/header.component';
 registerLocaleData(localeFr);
@@ -23,7 +23,7 @@ registerLocaleData(localeFr);
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FlexLayoutModule
+    FormsModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent]
