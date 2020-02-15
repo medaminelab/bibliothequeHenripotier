@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from '@angular/router';
 import { routesNames } from "./configs/RoutesConfig";
 import { AppComponent } from "./app.component";
-import { BooksPageComponent } from "./books/books-page/books-page.component";
+import { BooksPageComponent } from "./features/books/books-page/books-page.component";
 
 export const routes: Routes = [{
 	path: '',

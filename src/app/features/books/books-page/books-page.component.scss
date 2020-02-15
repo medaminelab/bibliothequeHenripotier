@@ -1,4 +1,4 @@
-@import "../../../global.scss";
+@import "../../../../global.scss";
 
 .search-bar {
   background-color: #ffffff;
@@ -20,6 +20,7 @@
 .app-page-container {
   h1 {
     margin: 16px 0px;
+    text-align: center;
   }
 
   .books-list {

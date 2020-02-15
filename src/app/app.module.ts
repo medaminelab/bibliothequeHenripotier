@@ -3,12 +3,12 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-rooting.module';
 import { HttpClientModule } from '@angular/common/http';
-import { BooksPageComponent } from './books/books-page/books-page.component';
-import { BookCardComponent } from './books/book-card/book-card.component';
+import { BooksPageComponent } from './features/books/books-page/books-page.component';
+import { BookCardComponent } from './features/books/book-card/book-card.component';
 import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import localeFr from '@angular/common/locales/fr';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './features/header/header.component';
 registerLocaleData(localeFr);
 
 

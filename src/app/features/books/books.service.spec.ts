@@ -3,7 +3,7 @@
 import { TestBed, async, inject, fakeAsync, tick, getTestBed } from '@angular/core/testing';
 import { BooksService } from './books.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { AppConfig } from '../configs/AppConfig';
+import { AppConfig } from '../../configs/AppConfig';
 import { Book } from './book.model';
 import { HttpClient } from '@angular/common/http';
 
