@@ -10,15 +10,27 @@ header {
     @include row-align();
     justify-content: space-between;
     align-items: center;
-    .header-title {
-      color: #ffffff;
-      font-size: 23px;
-      font-weight: bold;
-    }
     button {
       background: 0;
       border: 0;
       cursor: pointer;
+      position: relative;
+      .notifications {
+        width: 18px;
+        height: 18px;
+        border-radius: 8px;
+        background-color: #b12704;
+        position: absolute;
+        color: white;
+        top: 0px;
+        padding-left: 6px;
+        left: 28px;
+      }
+    }
+    .header-title {
+      color: #ffffff;
+      font-size: 23px;
+      font-weight: bold;
     }
 
     @include media-queries-breakpoint(xxl) {

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../book.model';
+import { CartService } from '../../cart/cart.service';
 
 @Component({
   selector: 'app-book-card',
@@ -10,9 +11,13 @@ export class BookCardComponent implements OnInit {
 
   @Input() book: Book;
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
+  }
+
+  addBookToCart(): void {
+    this.cartService.addBookToCart(this.book);
   }
 
 }

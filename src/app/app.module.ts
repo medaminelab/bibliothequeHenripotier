@@ -9,6 +9,7 @@ import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import localeFr from '@angular/common/locales/fr';
 import { HeaderComponent } from './features/header/header.component';
+import { CartPageComponent } from './features/cart/cart-page/cart-page.component';
 registerLocaleData(localeFr);
 
 
@@ -17,7 +18,8 @@ registerLocaleData(localeFr);
     AppComponent,
     HeaderComponent,
     BooksPageComponent,
-    BookCardComponent
+    BookCardComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,

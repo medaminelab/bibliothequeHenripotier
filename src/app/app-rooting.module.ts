@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { routesNames } from "./configs/RoutesConfig";
 import { AppComponent } from "./app.component";
 import { BooksPageComponent } from "./features/books/books-page/books-page.component";
+import { CartPageComponent } from "./features/cart/cart-page/cart-page.component";
 
 export const routes: Routes = [{
 	path: '',
@@ -14,7 +15,7 @@ export const routes: Routes = [{
 	pathMatch: 'full'
 }, {
 	path: routesNames.panier,
-	component: AppComponent,
+	component: CartPageComponent,
 	pathMatch: 'full'
 }];
 

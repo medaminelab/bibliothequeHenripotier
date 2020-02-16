@@ -1,8 +1,11 @@
 <header>
   <div>
-    <span class="header-title">Bibliothèque de Henri Potier</span>
-    <button>
+    <button (click)="redirectToPage('livres')">
+      <span class="header-title">Bibliothèque de Henri Potier</span>
+    </button>
+    <button (click)="redirectToPage('panier')">
       <img src="assets/cart.png" alt="Panier">
+      <div class="notifications" *ngIf="displayNotifications()">{{cartService.books.length}}</div>
     </button>
   </div>
 </header>

@@ -11,7 +11,7 @@ import { CommercialOfferEnum } from './commercial-offer.enum';
   providedIn: 'root'
 })
 export class CartService {
-  books: Book[];
+  books: Book[] = [];
 
   constructor(private http: HttpClient) { }
 

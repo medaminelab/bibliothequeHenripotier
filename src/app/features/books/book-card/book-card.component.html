@@ -1,6 +1,11 @@
 <div class="book-card-container" fxLayout="row">
   <div class="book-cover">
     <img mat-card-image [src]="book?.cover" alt="Book cover">
+    <div class="add-cart">
+      <button (click)="addBookToCart()" >
+        <img src="assets/cart.png" alt="Panier"> Ajouter au panier
+      </button>
+    </div>
   </div>
   <div class="book-description">
     <h2 class="book-title">
