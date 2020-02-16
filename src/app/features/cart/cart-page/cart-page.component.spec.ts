@@ -7,6 +7,8 @@ import { CartPageComponent } from './cart-page.component';
 import { CartService } from '../cart.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('CartPageComponent', () => {
   let component: CartPageComponent;
@@ -14,7 +16,7 @@ describe('CartPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule, ToastrModule.forRoot(), BrowserAnimationsModule],
       declarations: [CartPageComponent],
       providers: [CartService]
     })
@@ -23,8 +25,8 @@ describe('CartPageComponent', () => {
 
 
   it('should initialize the page Properties from the cartService and call the service to delete a book from the cart',
-    fakeAsync(inject([CartService],
-      (cartService: CartService) => {
+    fakeAsync(inject([CartService, ToastrService],
+      (cartService: CartService, toastrService: ToastrService) => {
 
         /*** mock the method getTotalPrice of the cartService to get the total price of the cart ***/
         spyOn(cartService, 'getBooksInCart').and.returnValue(booksInCartMock);
@@ -54,13 +56,14 @@ describe('CartPageComponent', () => {
         /****** Tester la suppression d'un livre du panier  ******/
 
         const cartServiceSpyOnDeleteBook = spyOn(cartService, 'removeBookFromCart').and.callFake(() => { });
+        const toastServiceSpy = spyOn(toastrService, 'success').and.callFake(() => { });
         // Simuler le click sur le bouton supprimer pour supprimer un livre du panier
         const compiledDeleteButton = fixture.debugElement.queryAll(By.css('.delete-book'))[0];
         compiledDeleteButton.nativeElement.dispatchEvent(new Event('click'));
 
-        // Vérifier si la méthode removeBookFromCart du cartService et réinitialize les propiété de la page
+        // Vérifier si la méthode removeBookFromCart du cartService et réinitialize les propiété de la page et le toastr a été affiché
         expect(cartServiceSpyOnDeleteBook).toHaveBeenCalled();
-
+        expect(toastServiceSpy).toHaveBeenCalled();
       })));
 
 });

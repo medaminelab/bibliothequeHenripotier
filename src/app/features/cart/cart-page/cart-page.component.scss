@@ -20,8 +20,8 @@ h1 {
     @include row-align();
     justify-content: space-between;
     align-items: center;
-    border-top: solid 1px $brown-color;
-    border-bottom: solid 1px $brown-color;
+    border-top: solid 1px $blue-color;
+    border-bottom: solid 1px $blue-color;
     padding: 10px;
     .book-container {
       @include row-align();
@@ -42,7 +42,7 @@ h1 {
           background: 0;
           border: 0;
           cursor: pointer;
-          color: $brown-color;
+          color: $blue-color;
           margin-top: 25px;
           &:hover {
             text-decoration: underline;

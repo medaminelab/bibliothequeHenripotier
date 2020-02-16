@@ -10,8 +10,8 @@ $xxl-width: 1170px;
 $xxxl-width: 1330px;
 
 /*** Variables de couleurs ***/
-$background-color: #f8e8c6;
-$brown-color: #a38f6b;
+$background-color: #f3f6f9;
+$blue-color: #030339;
 $red-color: #b12704;
 
 /*** Mixins ***/
@@ -54,7 +54,7 @@ body {
   margin: 0px;
   background-color: $background-color;
   h1 {
-    color: $brown-color;
+    color: $blue-color;
     margin: 0px;
     font-size: 26px;
     font-weight: bold;

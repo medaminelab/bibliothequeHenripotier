@@ -12,6 +12,7 @@ import { HttpTestingController, HttpClientTestingModule } from '@angular/common/
 import { Observable } from 'rxjs';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { ToastrModule } from 'ngx-toastr';
 registerLocaleData(localeFr);
 
 describe('BooksPageComponent', () => {
@@ -20,7 +21,7 @@ describe('BooksPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule, HttpClientTestingModule],
+      imports: [FormsModule, HttpClientTestingModule, ToastrModule.forRoot()],
       declarations: [BooksPageComponent, BookCardComponent],
       providers: [BooksService, HttpClient, { provide: LOCALE_ID, useValue: 'fr-FR' }]
     })

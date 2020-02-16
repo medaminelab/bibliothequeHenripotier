@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import localeFr from '@angular/common/locales/fr';
 import { HeaderComponent } from './features/header/header.component';
 import { CartPageComponent } from './features/cart/cart-page/cart-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 registerLocaleData(localeFr);
 
 
@@ -25,7 +28,9 @@ registerLocaleData(localeFr);
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent]
