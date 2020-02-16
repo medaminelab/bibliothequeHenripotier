@@ -4,21 +4,21 @@ Application web d'une bibliothèque d'Henri Potier développée avec le Framewor
 
 ## Lancement de l'application
 
-Afin de lancer l'application, ilfaut avoir au moins la version 12 du nodeJS.
+Afin de lancer l'application, il faut avoir au moins la version 12 du nodeJS.
 
 Après avoir cloner le répo, il faut lancer la commande `npm install` pour installer tous les packages et les dépendances utiles.
 
-Pour lancer l'application, il faut lancer le script start avec la commande `npm run start`.
+Pour lancer l'application, il faut exécuter le script start avec la commande `npm run start`.
 
-L'application marche sur Chrome et Firefox mais pas sur Internet Explorer. Il suffit d'ajouter les polyfills nécessaires dans le fichier `pollyfill.ts` pour que ça marche sur Internet Explorer.
+L'application est compatible avec les deux navigateurs Chrome et Firefox.
 
 ## Lancement des tests unitaires
 
-Les tests unitaires on été développé avec le language [Jasmine](https://jasmine.github.io/).
+Les tests unitaires on été développés avec le language [Jasmine](https://jasmine.github.io/).
 
 [Karma](https://jasmine.github.io/) a été utilisé pour exécuter les tests.
 
-Pour lancer les tests unitaires et voir le taux de couverture, lancer le script test avec la commande `npm run test`.
+Pour lancer les tests unitaires et voir le taux de couverture, exécuter le script test avec la commande `npm run test`.
 
 Les taux de couverture de l'application sont exprimés par ces chiffres: 
 `Statements   : 100% ( 177/177 )`
@@ -30,10 +30,10 @@ Les taux de couverture de l'application sont exprimés par ces chiffres:
 
 Exécutez le script build `npm run build` pour builder l'application. Les artefacts de construction seront stockés dans le répertoire `dist /`.
 
-## Déscription de l'application
+## Description de l'application
 
 L'application comprend deux interfaces avec un header :
 
-- La première permet d’afficher les livres que l’on souhaite acheter et d’effectuer une recherche libre.
-- La seconde récapitule le panier où sera appliquée la meilleure offre commerciale possible.
-- Header qui contient le titre de l'application `Bibliothèque d'Henri Potier` qui permet de naviguer vers la première interface et une icone de panier avec le nombre d'article dedans qui permet de naviguer vers la seconde interface.
+- La première IHM permet d’afficher les livres qu'on souhaite acheter et d’effectuer une recherche libre.
+- La seconde IHM récapitule le panier où sera appliquée la meilleure offre commerciale possible.
+- Le Header qui contient le titre de l'application `Bibliothèque d'Henri Potier` qui permet de naviguer vers la première interface et une icone de panier avec le nombre d'articles dedans qui permet de naviguer vers la seconde interface.
