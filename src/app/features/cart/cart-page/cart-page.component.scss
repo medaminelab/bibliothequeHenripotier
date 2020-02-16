@@ -1,0 +1,74 @@
+@import "../../../../global.scss";
+
+h1 {
+  margin: 16px 0px;
+  text-align: center;
+}
+
+.cart-container {
+  min-height: 300px;
+  padding: 31px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.161);
+  .price-libelle {
+    text-align: right;
+    padding: 10px;
+    color: 555;
+    font-size: 16px;
+  }
+  .cart-book {
+    @include row-align();
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px $brown-color;
+    border-bottom: solid 1px $brown-color;
+    padding: 10px;
+    .book-container {
+      @include row-align();
+      .book-cover {
+        img {
+          width: 80px;
+          height: 110px;
+        }
+      }
+      .book-description {
+        margin-left: 20px;
+        .book-reference {
+          margin-top: 10px;
+          font-weight: 100;
+          color: #555;
+        }
+        .delete-book {
+          background: 0;
+          border: 0;
+          cursor: pointer;
+          color: $brown-color;
+          margin-top: 25px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .book-price {
+    font-weight: 900;
+    font-size: 22px;
+    text-align: right;
+  }
+  .total-price {
+    padding: 10px;
+    text-align: right;
+    font-size: 20px;
+    span.book-price {
+      color: #555;
+      text-decoration: line-through;
+    }
+    span.best-commercial-offer {
+      font-weight: 900;
+      font-size: 22px;
+      margin-left: 30px;
+      color: $red-color;
+    }
+  }
+}

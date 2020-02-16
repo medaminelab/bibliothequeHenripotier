@@ -1,3 +1,44 @@
-<p>
-  cart-page works!
-</p>
+<div class="app-page-container">
+
+  <h1>Votre Panier <span *ngIf="!books.length"> est vide pour le moment.</span></h1>
+
+  <div class="cart-container" *ngIf="books.length">
+    <div class="price-libelle">
+      Prix
+    </div>
+    <div class="cart-book" *ngFor="let book of books">
+
+      <div class="book-container">
+        <div class="book-cover">
+          <img mat-card-image [src]="book?.cover" alt="Book cover">
+        </div>
+
+        <div class="book-description">
+          <h2 class="book-title">
+            {{book?.title}}
+          </h2>
+          <div class="book-reference">
+            {{book?.isbn}}
+          </div>
+
+          <button class="delete-book" (click)="deleteBookFromCart(book)">
+            supprimer
+          </button>
+        </div>
+      </div>
+
+      <div class="book-price">
+        {{book?.price | currency:'EUR':'symbol':'':'fr'}}
+      </div>
+
+    </div>
+
+    <div class="total-price">
+      <span class="book-price">{{totalCartPrice| currency:'EUR':'symbol':'':'fr'}}</span>
+      <br />
+      Sous-total ({{books.length}} livres): <span
+        class="best-commercial-offer">{{bestCommercialOffer| currency:'EUR':'symbol':'':'fr'}}</span>
+    </div>
+  </div>
+
+</div>
