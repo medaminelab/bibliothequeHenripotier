@@ -4,17 +4,17 @@ Application web d'une bibliothèque d'Henri Potier développée avec le Framewor
 
 ## Lancement de l'application
 
-Il faut avoir au moins la version 12 du nodeJS pour faire marcher l'application.
+Afin de lancer l'application, ilfaut avoir au moins la version 12 du nodeJS.
 
 Après avoir cloner le répo, il faut lancer la commande `npm install` pour installer tous les packages et les dépendances utiles.
 
 Pour lancer l'application, il faut lancer le script start avec la commande `npm run start`.
 
-L'application marche sur Chrome et Firefox mais pas sur Internet Explorer. Il suffit juste d'ajouter les polyfills nécessaires dans le fichier `pollyfill.ts` pour que ça marche sur Internet Explorer.
+L'application marche sur Chrome et Firefox mais pas sur Internet Explorer. Il suffit d'ajouter les polyfills nécessaires dans le fichier `pollyfill.ts` pour que ça marche sur Internet Explorer.
 
 ## Lancement des tests unitaires
 
-Les test unitaires on été développé avec le language [Jasmine](https://jasmine.github.io/).
+Les tests unitaires on été développé avec le language [Jasmine](https://jasmine.github.io/).
 
 [Karma](https://jasmine.github.io/) a été utilisé pour exécuter les tests.
 
@@ -32,7 +32,7 @@ Exécutez le script build `npm run build` pour builder l'application. Les artefa
 
 ## Déscription de l'application
 
-L'application comprend deux interfaces et header :
+L'application comprend deux interfaces avec un header :
 
 - La première permet d’afficher les livres que l’on souhaite acheter et d’effectuer une recherche libre.
 - La seconde récapitule le panier où sera appliquée la meilleure offre commerciale possible.
