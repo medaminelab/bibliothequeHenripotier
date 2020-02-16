@@ -47,7 +47,7 @@ export class CartService {
     return this.http.get<{ offers: CommercialOffer[] }>(this.getCommercialOffersUrl()).pipe(
       map(recievedRespone => {
         let commercialOffersPrices: number[] = [];
-
+        let bestCommercialOffer: number = totalPrice;
         for (let offer of recievedRespone.offers) {
           let reduction: number;
 
@@ -64,7 +64,10 @@ export class CartService {
         }
         console.log(commercialOffersPrices);
         // retourner l'offre commerciale la plus optimale du panier
-        return Math.min(...commercialOffersPrices);
+        if (commercialOffersPrices.length) {
+          bestCommercialOffer = Math.min(...commercialOffersPrices);
+        }
+        return bestCommercialOffer;
       })
     )
   }

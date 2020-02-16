@@ -1,9 +1,9 @@
 <header>
   <div>
-    <button (click)="redirectToPage('livres')">
+    <button id="title-button" (click)="redirectToPage('livres')">
       <span class="header-title">Bibliothèque de Henri Potier</span>
     </button>
-    <button (click)="redirectToPage('panier')">
+    <button id="cart-button" (click)="redirectToPage('panier')">
       <img src="assets/cart.png" alt="Panier">
       <div class="notifications" *ngIf="displayNotifications()">{{cartService.books.length}}</div>
     </button>

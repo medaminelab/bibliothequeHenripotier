@@ -1,27 +1,36 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { AppModule } from './app.module';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
+import { routes } from './app-rooting.module';
+import { FormsModule } from '@angular/forms';
+import { CartPageComponent } from './features/cart/cart-page/cart-page.component';
+import { BooksPageComponent } from './features/books/books-page/books-page.component';
+import { BookCardComponent } from './features/books/book-card/book-card.component';
+import { HeaderComponent } from './features/header/header.component';
+import { CartService } from './features/cart/cart.service';
+import { By } from '@angular/platform-browser';
 describe('AppComponent', () => {
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
+      imports: [HttpClientModule, RouterTestingModule.withRoutes(routes), FormsModule],
+      declarations: [HeaderComponent, BookCardComponent, BooksPageComponent, CartPageComponent, AppComponent],
+    })
+      .compileComponents();
   }));
-  it('should create the app', async(() => {
+
+  it('should integrate the header', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    let compiledHeader = fixture.debugElement.query(By.css('app-header'));
+    expect(compiledHeader).toBeTruthy();
   }));
-  it(`should have as title 'app'`, async(() => {
+
+  it('should integrate the router-outlet whitch contains the pages ofthe application depends on the routting', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
+    let compiledRouterOutlet = fixture.debugElement.query(By.css('router-outlet'));
+    expect(compiledRouterOutlet).toBeTruthy();
   }));
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
-  }));
+
 });
