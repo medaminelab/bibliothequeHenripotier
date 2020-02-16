@@ -26,7 +26,7 @@ describe('BookCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should call the addBookToCart methof of the cartService on the button click', inject([CartService],
+  it('should call the addBookToCart method of the cartService on the button click', inject([CartService],
     (cartService: CartService) => {
 
       // Spy on the addBookToCart method of cartService with the book in the cardComponent

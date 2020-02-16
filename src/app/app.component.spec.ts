@@ -27,7 +27,7 @@ describe('AppComponent', () => {
     expect(compiledHeader).toBeTruthy();
   }));
 
-  it('should integrate the router-outlet whitch contains the pages ofthe application depends on the routting', async(() => {
+  it('should integrate the router-outlet whitch contains the pages ofthe application depends on the routing', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     let compiledRouterOutlet = fixture.debugElement.query(By.css('router-outlet'));
     expect(compiledRouterOutlet).toBeTruthy();

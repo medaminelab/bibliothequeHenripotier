@@ -19,7 +19,7 @@ describe('Service: Cart', () => {
     expect(service.getBooksInCart()).toEqual(booksMock);
   }));
 
-  it('should add delete books from the cart', inject([CartService], (service: CartService) => {
+  it('should add and delete books from the cart', inject([CartService], (service: CartService) => {
     let book = {
       isbn: "a460afed-e5e7-4e39-a39d-c885c05db500",
       title: "Henri Potier et la Chambre des secrets",
